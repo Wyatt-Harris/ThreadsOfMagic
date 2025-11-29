@@ -22,12 +22,13 @@ Concept	Implementation
 -Arrays	Each character’s inventory is a fixed-size Item[] array.  
 -Collections	Rooms use ConcurrentLinkedQueue<Item> and ConcurrentHashMap for flags.  
 -Lambdas & Streams	Used for event handling (Consumer<Event>), inventory filtering, and logging.  
--Parallelism / Threads	Each character, the event dispatcher, and the logger run in independent threads.  
--Synchronization	The HorcruxFragment uses a ReentrantLock to prevent concurrent examination.  
--Functional Programming	Streams process inventory and events cleanly with concise lambda expressions.  
--Safe Concurrency	Uses BlockingQueue<Event>, ExecutorService, and ReentrantLock for safe coordination.  
-🧙 Characters & Abilities  
-Character	Thread Role	Abilities  
+Parallelism / Threads	Each character, the event dispatcher, and the logger run in independent threads.
+Thread Synchronization Approach	
+The game uses several thread synchronization techniques to ensure safe concurrent access to shared resources:
+- **ReentrantLock**: Each HorcruxFragment uses a ReentrantLock so only one character can examine (solve) it at a time, preventing race conditions.
+- **Synchronized blocks**: When picking up items, code synchronizes on the room object to prevent multiple characters from modifying the room’s item list simultaneously.
+- **Volatile fields**: The `alive` field in Character is volatile to ensure visibility of changes across threads.
+These mechanisms prevent data corruption and ensure consistent game state during multithreaded gameplay.
 -Harry	Fighter / Seeker	Seeks Horcrux faster, uses defensive spells 
 -Hermione	Scholar / Spellcaster	Researches and unlocks Horcruxes  
 -Ron	Rogue / Scout	Disarms traps
