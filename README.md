@@ -1,7 +1,6 @@
--Magic Multithreading   
+-Multithreading Magic
 Summary  
-In this action-packed, text-based adventure game, the power trio from the Harry Potter world, Harry, Ron, and Hermione, embark on an adventure to find and study the Horcrux fragment that is 
-stashed away somewhere in Hogwarts.
+In this text-based adventure game, follow around the famous trio from the Harry Potter series in order to find and solve Horcruxes hidden at Hogwarts. Have chance encounters with dementors, traps, and potions that will put the fate of the wizarding and muggle worlds in danger!
 
 -Features & Use Cases     
 The main feature of this game is the use of multithreading to tell multiple action-packed stories at once. The use cases would be anytime a user wants to have some fun!    
