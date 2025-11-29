@@ -3,11 +3,12 @@ Summary
 In this text-based adventure game, follow around the famous trio from the Harry Potter series in order to find and solve Horcruxes hidden at Hogwarts. Have chance encounters with dementors, traps, and potions that will put the fate of the wizarding and muggle worlds in danger!
 
 -Features & Use Cases     
-The main feature of this game is the use of multithreading to tell multiple action-packed stories at once. The use cases would be anytime a user wants to have some fun!    
+Use Case: Anytime someone needs some quick fun  
+Features: Varying potions, dementor encounters, Hogwarts exploration, traps 
 -Technologies Used    
 Java, weather meteo API, Multithreading, Lambda Expressions     
 -Weather API  
-A weather API is used in this game that enhances the experience by changing how powerful certain spells are in the context of the weather.
+A weather API is used in this game that enhances the experience by changing the mood based on the real weather in Scotland!
 -How to run the project    
 Make sure your machine can compile and run Java source code and download these files. After the download, run the file titled GameEngine   
 -Contributors & Responsibilities    
@@ -27,6 +28,6 @@ Concept	Implementation
 -Safe Concurrency	Uses BlockingQueue<Event>, ExecutorService, and ReentrantLock for safe coordination.  
 🧙 Characters & Abilities  
 Character	Thread Role	Abilities  
--Harry	Fighter / Seeker	Seeks Horcrux faster, uses basic spells  
--Hermione	Scholar / Spellcaster	Researches and unlocks magical puzzles  
--Ron	Rogue / Scout	Disarms traps, can sneak to avoid enemies  
+-Harry	Fighter / Seeker	Seeks Horcrux faster, uses defensive spells 
+-Hermione	Scholar / Spellcaster	Researches and unlocks Horcruxes  
+-Ron	Rogue / Scout	Disarms traps
